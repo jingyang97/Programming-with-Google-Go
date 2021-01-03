@@ -6,12 +6,20 @@
 
 ```go
 var funcVar func(int) int
+func incFn(x int) int {
+   return x + 1
+}
+func main() {
+   funcVar = incFn
+   fmt.Print(funcVar(1))
+}
+
 ```
 
 ### Functions as Argument
 
 ```go
-func applyIt(aFunc fuct (int) int, val int) int {
+func applyIt(aFunc func (int) int, val int) int {
     return aFunc(val)
 }
 ```
